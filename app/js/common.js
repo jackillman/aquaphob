@@ -2,13 +2,21 @@ var clock
 $(document).ready(function() {
 
 
-    clock = $('.mytimer').FlipClock({
-        clockFace: 'TwentyFourHourClock',
-        countdown:true
-        }); 
-    clock.setTime(250);
+    var clock;
+    clock = $('.attention__mytimer').FlipClock({
+        clockFace: 'HourlyCounter',
+        language:'ru-ru',
+        autoStart: false,
+        callbacks: {
+            stop: function() {
+                $('.message').html('The clock has stopped!')
+            }
+        }
+    });
+   
+    clock.setTime(48695);
+    clock.setCountdown(true);
     clock.start();
-
 
     $('.problems__slider').slick({
         infinite:true,
@@ -57,7 +65,8 @@ $(document).ready(function() {
         slidesToShow:2,
         slidesToScroll:2,
         arrows: true,
-       
+        prevArrow: '<div class="prev"><i class="fa fa-long-arrow-left fa-2x" aria-hidden="true"></i></div>',
+        nextArrow: '<div class="next"><i class="fa fa-long-arrow-right fa-2x" aria-hidden="true"></i></div>',
         responsive: [
             {
               breakpoint: 992,

@@ -93,7 +93,7 @@
 						</div>
 						<div class="col-sm-6 col-md-6">
 							<div class="top-form">
-								<form action="">
+								<form>
 									<h3 class="top-form__title">Получите Aquaphob всего за <span class="top-form__crossed">500</span> <span class="top-form__price">249</span> <span class="currency"></span>грн.</span></h3>
 									<input type="text" name="name" class="top-form__name" placeholder="Введите Ваше имя">
 									<input type="number" name="phone" class="top-form__phone" placeholder="Введите Ваш телефон">
@@ -101,13 +101,13 @@
 								</form>
 								<img class="bottle-top" src="img/bottle-top.png" alt="bottle">	
 							</div>
-						
 						</div>
 					</div>
 				</div>
 				
 			</div>
 		</header>
+
 		<div class="main">
 			<div class="attention">
 				<div class="container">
@@ -116,13 +116,13 @@
 							<h2 class="attention__title">Внимание <span class="attention__highlight">Акция!</span></h2>
 							<p class="attention__desc">Количество акционного товара ограниено</p>
 						</div>
-						<div class="col-sm-4 attention__part attention__part1">
+						<div class="col-sm-6 col-md-4 attention__part attention__part1">
 							<h3>При покупке трех флаконов - два в подарок!</h3>
-							<img src="img/five-bottles.png" alt="five-bottles">
+							<img class="img-responsive" src="img/five-bottles.png" alt="five-bottles">
 						</div>
-						<div class="col-sm-4 attention__part attention__part2">
+						<div class="col-sm-6 col-md-4 attention__part attention__part2">
 							<h3>При покупке двух флаконов - один в подарок!</h3>
-							<img src="img/three-bottles.png" alt="three-bottles">
+							<img class="img-responsive" src="img/three-bottles.png" alt="three-bottles">
 							<div class="attention__price-item">
 								<div class="attention__price-item-inner">
 									<div class="attention__price-box" >
@@ -133,14 +133,15 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-sm-4 attention__part attention__part3">
+						<div class="col-sm-12 col-md-4 attention__part attention__part3">
 							<div class="timer">
-									<div class="mytimer"></div>
+								<h3>До конца акции:</h3>
+								<div class="attention__mytimer"></div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			</div><!-- end attention  -->
 
 			<div class="hydrophobic">
 				<div class="container">
@@ -161,10 +162,10 @@
 								Обработанные материалы приобретают настолько сильные водоотталкивающие свойства, что их поверхность
 								практически не взаимодействует с водой и ее растворами и поэтому обладает эффектом самоочищения. 
 							</p>
-							<img src="img/what1.jpg" alt="what">
+							<img class="img-responsive" src="img/what1.jpg" alt="what">
 						</div>
 						<div class="col-sm-6">
-							<img src="img/what2.jpg" alt="what">
+							<img class="img-responsive" src="img/what2.jpg" alt="what">
 							<p class="hydrophobic__content-title">
 									Перед обычными водоотталкивающими средствами для обуви и одежды Aquaphob имеет 
 									следующие преимущества:
@@ -182,7 +183,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div><!-- end hydrophobic  -->
 
 			<div class="problems">
 				<div class="container">
@@ -259,7 +260,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div><!-- end problems  -->
 
 			<div class="theory">
 				<div class="container">
@@ -314,11 +315,12 @@
 							</div>
 						</div>
 						<div class="col-md-3 hidden-sm hidden-xs">
-							<img src="../img/capilar.png" alt="capilar">
+							<img class="img-responsive" src="../img/capilar.png" alt="capilar">
 						</div>
 					</div>
 				</div>
-			</div>
+			</div><!-- end theory  -->
+
 			<div class="practice">
 				<div class="container">
 					<div class="row">
@@ -375,7 +377,8 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div><!-- end practice  -->
+
 			<div class="faq">
 				<div class="container">
 					<div class="row">
@@ -483,12 +486,12 @@
 								</div>
 							</div>
 									  
-							<button >Задать вопрос</button>
+							<button class="question">Задать вопрос</button>
 
 						</div>
 					</div>
 				</div>
-			</div>
+			</div><!-- end faq  -->
 
 			<div class="effective">
 				<div class="container">
@@ -509,7 +512,7 @@
 						
 					</div>
 				</div>
-			</div>
+			</div><!-- end effective  -->
 
 			<div class="reviews">
 				<div class="container">
@@ -517,60 +520,127 @@
 						<div class="col-sm-12">
 							<h2 class="reviews__title">Отзывы наших <span class="reviews__highlight">клиентов</span></h2>	
 						</div>
-					<ul class="reviews__slider">
-
-						 <li>
-							<iframe
-								src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Faquaphob%2Fposts%2F619985704815118&width=500"
-								width="500" height="450" style="border:none;overflow:hidden" scrolling="no"
-								frameborder="0" allowTransparency="true">
-							</iframe>
-						</li>
-						<li>
-								<iframe
+						<div class="col-sm-12">
+							<div class="reviews__slider">
+								<div class="reviews__slide">
+									<iframe
+										src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Faquaphob%2Fposts%2F619985704815118&width=500"
+										width="" height="" style="border:none;overflow:hidden" scrolling="no"
+										frameborder="0" allowTransparency="true">
+									</iframe>
+								</div>
+								<div class="reviews__slide">
+									<iframe
 										src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Falex.lyashenko.94%2Fvideos%2F1205579812792878%2F&show_text=1&width=560"
-										width="500" height="450" style="border:none;overflow:hidden" scrolling="no"
-										frameborder="0" allowTransparency="true"></iframe>
-							</li>
-							<li>
-								<iframe
+										width="" height="" style="border:none;overflow:hidden" scrolling="no"
+										frameborder="0" allowTransparency="true">
+									</iframe>		
+								</div>
+								<div class="reviews__slide">
+									<iframe
 										src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2F100000443269121%2Fvideos%2F1079576112067154%2F&width=500"
-										width="500" height="450" style="border:none;overflow:hidden" scrolling="no"
-										frameborder="0" allowTransparency="true"></iframe>
-							</li>
-							<li>
-								<iframe
+										width="" height="" style="border:none;overflow:hidden" scrolling="no"
+										frameborder="0" allowTransparency="true">
+									</iframe>	
+								</div>
+								<div class="reviews__slide">
+									<iframe
 										src="https://www.facebook.com/plugins/comment_embed.php?href=https%3A%2F%2Fwww.facebook.com%2Faquaphob%2Fvideos%2F556180957862260%2F%3Fcomment_id%3D694649874015367&include_parent=false"
-										width="500" height="450" style="border:none;overflow:hidden" scrolling="no"
-										frameborder="0" allowTransparency="true"></iframe>
-							</li>
-							<li>
-								<iframe
-										src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Faquaphob%2Fposts%2F577657662381256&width=500"
-										width="500" height="161" style="border:none;overflow:hidden" scrolling="no"
-										frameborder="0" allowTransparency="true"></iframe>
-							</li>
-							<li>
-								<iframe
-										src="https://www.facebook.com/plugins/comment_embed.php?href=https%3A%2F%2Fwww.facebook.com%2Faquaphob%2Fvideos%2F532516216895401%2F%3Fcomment_id%3D560703670743322&include_parent=false"
-										width="500" height="450" style="border:none;overflow:hidden" scrolling="no"
-										frameborder="0" allowTransparency="true"></iframe>
-							</li> 
-					</ul>	
-						
-
+										width="" height="" style="border:none;overflow:hidden" scrolling="no"
+										frameborder="0" allowTransparency="true">
+									</iframe>	
+								</div>
+							
+							</div>	
+						</div>
+						<div class="col-sm-12">
+							<div class="reviews__more">
+								<a href="#">Больше отзывов в facebook</a>
+							</div>
+						</div>
 					</div>
 				</div>
-
+			</div><!-- end reviews  -->
+			<div class="delivery">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<h2 class="delivery__title">Доставка и <span class="delivery__highlight">Оплата</span></h2>	
+						</div>
+						<div class="col-sm-6">
+							<ul>
+								<li><span>	Доставка осуществляется по всей Украине Новой Почтой</span></li>
+								<li><span>Оплатить заказ возможно при получении посылки (наложенный платеж)
+									или по предоплате. Сроки доставки - 1-2 дня.</span></li>
+								<li><span>Для получения посылки при себе нужно иметь документ, удостоверяющий личность 
+									(паспорт или водительские права) и трек-номер посылки.</span></li>
+							</ul>
+						</div>
+						<div class="col-sm-6">
+						<img class="img-responsive" src="img/delivery.png" alt="parcel-delivery">
+						</div>
+						<div class="col-sm-12">
+							<div class="payment">
+								<div class="payment__desc">
+									<p class="payment__desc-item">Стоимость доставки - <span class="payment__highlight"> 32грн.</span></p>
+									<p class="payment__desc-item">При оплате наложенным платежом <span class="payment__highlight">+ 31грн.</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
+			<div class="make">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="make__video">
+								<iframe width="" height="" src="https://www.youtube.com/embed/PKo4UEae_gk?rel=0" 
+										frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen>
+								</iframe>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="make-form">
+								<form>
+									<h3 class="make-form__title">Получите Aquaphob всего за <span class="make-form__crossed">500</span> <span class="top-form__price">249</span> <span class="currency"></span>грн.</span></h3>
+									<input type="text" name="name" class="make-form__name" placeholder="Введите Ваше имя">
+									<input type="number" name="phone" class="make-form__phone" placeholder="Введите Ваш телефон">
+									<button class="make-form__send-to">Получить сейчас</button>
+								</form>
+								<img class="bottle-top" src="img/bottle-bottom.png" alt="bottle">	
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contacts">
+				<div class="container">
+					<div class="row">
+						<div class="col sm-12">
+							<div class="contacts__content">
+								<a href="tel:+38(093)576-57-94" class="contacts__phone">+38 <span class="contacts__highlight">(093)</span> 576-57-94</a>
+								<a href="mailto:aquaphob.net@gmail.com" class="contacts__email">aquaphob.net@gmail.com</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- end main  -->
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<p> &copy; 2017. Aquaphob. All rights reserved.</p>
+					</div>
+				</div>
+			</div>
+		</footer>
 
-		</div>
+
 		
+	</div><!-- end wrapper  -->
 
-
-		
-	</div>
-<!-- end wrapper  -->
 <!-- <div id="up"><i class="fa fa-angle-up" aria-hidden="true"></i></div> -->
 
 
