@@ -1,9 +1,12 @@
-var clock
+
 $(document).ready(function() {
+  $(".nav-mobile").on("click",topMenuManipulation);
+  function topMenuManipulation(){
+    $(".header-top__menu-mobile").toggleClass("active-mob");
+  }
 
-
-    var clock;
-    clock = $('.attention__mytimer').FlipClock({
+    var clock1;
+    clock1 = $('.attention__mytimer1').FlipClock({
         clockFace: 'HourlyCounter',
         language:'ru-ru',
         autoStart: false,
@@ -13,10 +16,25 @@ $(document).ready(function() {
             }
         }
     });
-   
-    clock.setTime(48695);
-    clock.setCountdown(true);
-    clock.start();
+
+    var clock2;
+    clock2 = $('.attention__mytimer2').FlipClock({
+        clockFace: 'HourlyCounter',
+        language:'ru-ru',
+        autoStart: false,
+        callbacks: {
+            stop: function() {
+                $('.message').html('The clock has stopped!')
+            }
+        }
+    });
+    clock1.setTime(48695);
+    clock1.setCountdown(true);
+    clock1.start();
+
+    clock2.setTime(48695);
+    clock2.setCountdown(true);
+    clock2.start();
 
     $('.problems__slider').slick({
         infinite:true,
@@ -33,7 +51,7 @@ $(document).ready(function() {
                 slidesToShow: 2,
                 slidesToScroll: 1,
                 infinite: true,
-                dots: true
+               
               }
             },
             // {

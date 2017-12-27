@@ -48,19 +48,31 @@
 								<a href="">	<img src="img/logo.png" alt="logo"></a>
 								</div>
 							</div>
-							<div class="col-xs-push-6 col-xs-6 col-sm-7 col-md-2 col-md-push-7">
+							<div class="col-xs-6 hidden-sm hidden-md hidden-lg">
+								<div class="nav-mobile hidden-sm hidden-md hidden-lg">
+									<span class="nav-mobile__line nav-mobile__line--top"></span>
+									<span class="nav-mobile__line nav-mobile__line--middle active"></span>
+									<span class="nav-mobile__line nav-mobile__line--bottom"></span>		
+								</div>
+
+
+							</div>
+							<ul class="header-top__menu-mobile hidden-sm hidden-md hidden-lg">
+								<li><a href="#">Что такое Aquaphob?</a></li>
+								<li><a href="#">Как это работает</a></li>
+								<li><a href="#">Отзывы Клиентов</a></li>
+								<li><a class="buy-now" href="#">Заказать сейчас!</a></li>
+								<li><a class="questions" href="#">Вопросы</a></li>
+							</ul>
+							<div class="col-xs-6 col-sm-7 col-md-2 col-md-push-7">
 								<div class="header-top__contacts">
 									<a class="phone" href="#">+38(093)576-57-94</a>
 									<a class="email" href="#">aquaphob.net@gmail.com</a>
 								</div>
 							</div>
-							<div class="col-xs-pull-6 col-xs-6 col-sm-12 col-md-7 col-md-pull-2">
-								<div class="nav-mobile hidden-sm hidden-md hidden-lg">
-									<span class="nav-mobile__line nav-mobile__line--top"></span>
-									<span class="nav-mobile__line nav-mobile__line--middle active"></span>
-									<span class="nav-mobile__line nav-mobile__line--bottom"></span>		
-									</div>
-								<ul class="header-top__menu hidden-xs">
+							<div id="menu" class="hidden-xs col-sm-12 col-md-7 col-md-pull-2">
+
+								<ul class="header-top__menu">
 									<li><a href="#">Что такое Aquaphob?</a></li>
 									<li><a href="#">Как это работает</a></li>
 									<li><a href="#">Отзывы Клиентов</a></li>
@@ -88,7 +100,7 @@
 										frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen>
 									</iframe>
 								</div>
-								<img class="boots-top" src="img/boots-top.png" alt="boots">
+								<img class="boots-top hidden-xs" src="img/boots-top.png" alt="boots">
 							</div>
 						</div>
 						<div class="col-sm-6 col-md-6">
@@ -99,7 +111,7 @@
 									<input type="number" name="phone" class="top-form__phone" placeholder="Введите Ваш телефон">
 									<button class="top-form__send-to">Получить сейчас</button>
 								</form>
-								<img class="bottle-top" src="img/bottle-top.png" alt="bottle">	
+								<img class="bottle-top hidden-xs" src="img/bottle-top.png" alt="bottle">	
 							</div>
 						</div>
 					</div>
@@ -116,9 +128,17 @@
 							<h2 class="attention__title">Внимание <span class="attention__highlight">Акция!</span></h2>
 							<p class="attention__desc">Количество акционного товара ограниено</p>
 						</div>
+
+						<div class="col-sm-12 hidden-xs hidden-md hidden-lg attention__part attention__part3">
+							<div class="timer">
+								<h3>До конца акции:</h3>
+								<div class="attention__mytimer1"></div>
+							</div>
+						</div>
+
 						<div class="col-sm-6 col-md-4 attention__part attention__part1">
 							<h3>При покупке трех флаконов - два в подарок!</h3>
-							<img class="img-responsive" src="img/five-bottles.png" alt="five-bottles">
+							<img class="img-responsive" src="img/5.png" alt="five-bottles">
 						</div>
 						<div class="col-sm-6 col-md-4 attention__part attention__part2">
 							<h3>При покупке двух флаконов - один в подарок!</h3>
@@ -133,10 +153,10 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-sm-12 col-md-4 attention__part attention__part3">
+						<div class="hidden-sm col-md-4 attention__part attention__part3">
 							<div class="timer">
 								<h3>До конца акции:</h3>
-								<div class="attention__mytimer"></div>
+								<div class="attention__mytimer2"></div>
 							</div>
 						</div>
 					</div>
@@ -162,10 +182,10 @@
 								Обработанные материалы приобретают настолько сильные водоотталкивающие свойства, что их поверхность
 								практически не взаимодействует с водой и ее растворами и поэтому обладает эффектом самоочищения. 
 							</p>
-							<img class="img-responsive" src="img/what1.jpg" alt="what">
+							<img class="img-responsive hydrophobic__img-left" src="img/what1.jpg" alt="what">
 						</div>
 						<div class="col-sm-6">
-							<img class="img-responsive" src="img/what2.jpg" alt="what">
+							<img class="img-responsive hydrophobic__img-right" src="img/what2.jpg" alt="what">
 							<p class="hydrophobic__content-title">
 									Перед обычными водоотталкивающими средствами для обуви и одежды Aquaphob имеет 
 									следующие преимущества:
@@ -180,6 +200,7 @@
 								<li><span>Не имеет запаха;</span></li>
 								<li><span>Работает на любом типе тканей.</span></li>
 							</ul>
+							<img class="img-responsive hydrophobic__img-left-bottom" src="img/what1.jpg" alt="what">
 						</div>
 					</div>
 				</div>
@@ -375,6 +396,9 @@
 								</div>
 							</div>
 						</div>
+						<div class="col-sm-12">
+							<button class="instruction">Подробные инструкции</button>
+						</div>
 					</div>
 				</div>
 			</div><!-- end practice  -->
@@ -496,10 +520,8 @@
 			<div class="effective">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-6">
-							<img class="effective__img" src="img/nike.png" alt="">
-						</div>
-						<div class="col-sm-6">
+
+						<div class="col-sm-6 col-sm-push-6">
 							<div class="effective__content">
 								<h3 class="effective__text">Если вы еще сомневаетесь в эффективности средства 
 									<span class="effective__highlight">Aquaphob</span>,
@@ -508,6 +530,9 @@
 								</h3>
 								<p>Для заказа заполните форму ниже с пометкой  "Образец ткани" </p>
 							</div>
+						</div>
+						<div class="col-sm-6 col-sm-pull-6">
+							<img class="effective__img" src="img/nike.png" alt="">
 						</div>
 						
 					</div>
@@ -603,12 +628,12 @@
 						<div class="col-sm-6">
 							<div class="make-form">
 								<form>
-									<h3 class="make-form__title">Получите Aquaphob всего за <span class="make-form__crossed">500</span> <span class="top-form__price">249</span> <span class="currency"></span>грн.</span></h3>
+									<h3 class="make-form__title">Получите Aquaphob всего за <span class="make-form__crossed">500</span> <span class="make-form__price">249</span> <span class="currency"></span>грн.</span></h3>
 									<input type="text" name="name" class="make-form__name" placeholder="Введите Ваше имя">
 									<input type="number" name="phone" class="make-form__phone" placeholder="Введите Ваш телефон">
 									<button class="make-form__send-to">Получить сейчас</button>
 								</form>
-								<img class="bottle-top" src="img/bottle-bottom.png" alt="bottle">	
+								<img class="bottle-top hidden-sm " src="img/bottle-bottom.png" alt="bottle">	
 							</div>
 						</div>
 					</div>
@@ -627,6 +652,7 @@
 				</div>
 			</div>
 		</div><!-- end main  -->
+
 		<footer class="footer">
 			<div class="container">
 				<div class="row">

@@ -97,6 +97,43 @@ body
 	display: block
 	max-width: 100%
 	height: auto
+
+
+// #menu
+// 	display: block!important
+// 	z-index: 1211
+// 	top: 160px
+// 	ul
+// 		height: 200px
+// 		width: 100%
+// 		display: block
+		
+// 		li
+// 			display: block
+// 			width: 100%
+// 			height: 20px
+			
+.header-top__menu-mobile
+	left: -1000px
+	text-align: center
+	width: 100%
+	position: absolute
+	list-style-type: none
+	padding: 0
+	top: 160px
+	z-index: 12
+	background: #ffffff
+	padding-bottom: 25px
+	transition: all 1s
+	a
+		color: $dark-black
+		line-height: 1.5
+		font-size: 24px
+.active-mob
+	left: 0px!important
+
+
+
 .no-flexbox
 	.wrapper
 		.header
@@ -120,7 +157,9 @@ body
 						text-align: right
 						font-size: 18px
 
-			
+
+
+
 
 
 .wrapper
@@ -176,6 +215,8 @@ body
 				display: inline-block
 				@include small
 					top: 7px
+				@include micro
+					top: 0px
 				&.active			
 					.nav-mobile__line--top
 						top: 50%
@@ -210,6 +251,7 @@ body
 				align-items: center
 				height: 80px
 				margin: 0
+				
 				li
 					height: 80px
 					display: flex
@@ -258,6 +300,8 @@ body
 						color: $accent
 					@include large
 						font-size: 14px
+					@include micro
+						font-size: 14px
 				.email
 					font-family: Museo300
 					font-size: 14px
@@ -277,17 +321,25 @@ body
 			background-position-x: 106%
 			position: relative
 			@include large
-				background-position-x: 200%
+				background-position-x: 300px
+				
 			@include medium
 				padding-top: 40px
-				background-position-x: -50%
+				background-position-x: 200px
 				background-size: cover
+				height: 650px
 			@include small
 				padding-top: 0
 				text-align: center
+				background: #ededed
+				height: 100%
+				padding-bottom: 30px
 			@include micro
 				padding-top: 0
 				text-align: center
+				background: #ededed
+				height: 100%
+				padding-bottom: 30px
 
 
 			.inaction
@@ -307,6 +359,10 @@ body
 					line-height: 1.3
 					padding: 0
 					margin: 0
+					@include small
+						font-size: 50px
+					@include micro
+						font-size: 40px
 				&__desc1
 					font-size: 24px
 					font-family: Oswald-Bold
@@ -315,6 +371,12 @@ body
 					margin: 0
 					line-height: 1
 					color: $dark-black
+					@include small
+						font-size: 20px
+						line-height: 1.3
+					@include micro
+						font-size: 20px
+						line-height: 1.3
 				&__title
 					font-size: 76px
 					font-family: Oswald-Bold
@@ -323,6 +385,10 @@ body
 					line-height: 1.3
 					padding: 0
 					margin: 0
+					@include small
+						font-size: 60px
+					@include micro
+						font-size: 40px
 				&__desc2
 					font-size: 24px
 					font-family: Oswald-Bold
@@ -334,6 +400,10 @@ body
 					color: $dark-black
 					@include medium
 						margin-bottom: 60px
+					@include small
+						line-height: 1.3
+					@include micro
+						line-height: 1.3
 				&__video
 					z-index: 10
 					position: relative
@@ -360,7 +430,6 @@ body
 						top: 250px
 						z-index: 3
 						
-
 				form
 					height: 400px
 					width: 400px
@@ -371,6 +440,18 @@ body
 					@include medium
 						position: absolute
 						right: 10px
+					@include small
+						height: 100%
+						width: 100%
+						border-radius: 0
+						background: transparent
+						padding-top: 0px
+					@include micro
+						height: 100%
+						width: 100%
+						border-radius: 0
+						background: transparent
+						padding-top: 0px
 						
 
 					input
@@ -386,6 +467,10 @@ body
 						outline: none
 						@include medium
 							line-height: 30px
+						@include small
+							width: 70%
+						@include micro
+							width: 100%
 
 				&__title
 					font-size: 24px
@@ -395,6 +480,8 @@ body
 					text-align: center
 					margin: 10px auto 30px
 					line-height: 1.2
+					@include micro
+						width: 100%
 
 				&__crossed
 					position: relative
@@ -406,10 +493,16 @@ body
 						left: -10px
 						height: 70%
 						transform: rotate(-25deg)
+						@include small
+							height: 50%
+						@include micro
+							height: 50%
 				&__price
 					font-size: 30px
 					color: $accent
 					@include medium
+						font-size: 26px
+					@include micro
 						font-size: 26px
 
 				&__send-to
@@ -423,8 +516,15 @@ body
 					color: $light-black
 					font-size: 20px
 					outline: none
+					transition: all 1s
+					@include small
+						width: 70%
+					@include micro
+						width: 100%
 					&:active
 						transform: translateY(2px)
+					&:hover
+						background: #09a043
 
 	.main
 		.attention
@@ -432,6 +532,16 @@ body
 			background-size: cover
 			padding-top: 40px
 			margin-bottom: 30px
+			@include small
+				background: url(../img/bg-two-mob.png) no-repeat bottom
+				background-size: cover
+				padding-bottom: 30px
+				margin-bottom: 0px
+			@include micro
+				background: url(../img/bg-two-mob.png) no-repeat bottom
+				background-size: cover
+				padding-bottom: 30px
+				margin-bottom: 0px
 
 			&__title
 				font-size: 50px
@@ -442,6 +552,9 @@ body
 				margin-bottom: 15px
 				line-height: 1
 				padding: 0
+				@include micro
+					font-size: 30px
+			
 			&__highlight
 				color: $accent
 			&__desc
@@ -457,11 +570,20 @@ body
 					font-family: Museo300
 					margin-bottom: 40px
 					color: $dark-black
+					@include small
+						margin-bottom: 10px
+						margin-top: 40px
 			&__part1
 				img
 					width: 230px
 					@include large
 						width: 200px
+					@include small
+						width: 200px
+						margin: 0 auto
+					@include micro
+						width: 200px
+						margin: 0 auto
 			&__part2
 				position: relative
 				img
@@ -470,7 +592,28 @@ body
 					position: relative
 					@include large
 						width: 140px
-			
+					@include small
+						width: 200px
+						left: 50%
+						transform: translateX(-50%)
+					@include micro
+						width: 150px
+						left: 40%
+						transform: translateX(-50%)
+			&__part3
+				h3
+					@include medium
+						margin-bottom: 0px
+					@include small
+						margin-bottom: 20px
+						text-align: center
+					@include micro
+						margin-bottom: 20px
+						text-align: center
+				@include medium
+					text-align: center
+					margin-bottom: 30px
+
 			&__price-item
 				width: 130px
 				height: 130px
@@ -482,6 +625,13 @@ body
 				z-index: 5
 				@include large
 					left: 130px
+				@include small
+					left: 65%
+					top: 100px
+				@include micro
+					left: auto
+					right: 30px
+					top: 100px
 			&__price-item-inner
 				width: 116px
 				height: 116px
@@ -509,18 +659,48 @@ body
 			&__percents
 				font-size: 20px
 				font-weight: normal
-			&__mytimer
+			&__mytimer1
 				@include large
 					zoom: 0.9
+				@include medium
+					zoom: 1
+					left: 50%
+					width: auto
+					display: inline-block
+			&__mytimer2
+				@include large
+					zoom: 0.9
+				@include medium
+					zoom: 1
+					left: 50%
+					width: auto
+					display: inline-block
+				@include small
+					zoom: 1
+					left: 50%
+					width: auto
+					display: inline-block
+					transform: translateX(-50%)
+				@include micro
+					zoom: 0.85
+					margin-left: 30px
+					width: auto
+					display: inline-block
+					
+					
 			.flip-clock-wrapper
+				@include medium
+					position: static
+				@include small
+					margin: 0 auto
+				@include micro
+					position: static
 				ul
 					border-radius: 0px!important
 					margin: 3px
 					background: #fff
 				.flip
-					width: 40px
-
-							
+					width: 40px		
 					.inn
 						background-color: #fff
 						color: $accent
@@ -530,6 +710,10 @@ body
 					background: #fff
 					@include large
 						left: 1px
+					@include medium
+						left: 0px
+					@include small
+						left: 0px
 				.flip-clock-label
 					bottom: -20px
 					right: -70px
@@ -541,6 +725,8 @@ body
 			padding-top: 40px
 			@include large
 				margin-bottom: 30px
+			@include medium
+				margin-bottom: 30px
 			&__title
 				font-size: 50px
 				text-transform: uppercase
@@ -550,6 +736,14 @@ body
 				margin-bottom: 15px
 				line-height: 1
 				padding: 0
+				@include medium
+					font-size: 30px
+				@include small
+					font-size: 30px
+				@include small
+					font-size: 30px
+				@include micro
+					font-size: 30px
 			&__highlight
 				color: $accent
 			&__desc
@@ -565,16 +759,47 @@ body
 				color: $accent
 				font-size: 22px
 				line-height: 1.3
-				
+				@include medium
+					font-size: 20px	
+				@include small
+					font-size: 20px
+				@include micro
+					font-size: 20px
 			&__content
 				font-family: Museo300
 				font-size: 22px
 				padding: 0
 				line-height: 1.3
 				margin-bottom: 30px
+				@include medium
+					font-size: 18px
+				@include small
+					font-size: 18px
+					margin-bottom: 20px
+				@include micro
+					font-size: 18px
+					margin-bottom: 20px
+
 			img
 				margin-bottom: 20px
+			&__img-left
+				@include small
+					display: none
+				@include micro
+					display: none
+			&__img-right
+				margin: 0 auto
+			&__img-left-bottom
+				display: none
+				@include small
+					display: block
+					margin: 0 auto
+				@include micro
+					display: block
+					margin: 0 auto
 			ul
+				@include medium
+					padding-left: 20px
 				li
 					font-family: Museo300
 					font-size: 22px
@@ -582,6 +807,13 @@ body
 					line-height: 1.3
 					margin-bottom: 16px
 					color: $accent
+					@include medium
+						font-size: 18px
+						margin-bottom: 2px
+					@include small
+						font-size: 18px
+					@include micro
+						font-size: 18px
 					span
 						color: $light-black
 
@@ -589,6 +821,10 @@ body
 			background: url(../img/strm3.png) no-repeat bottom
 			background-size: cover
 			padding-top: 40px
+			@include small
+				padding-bottom: 40px
+			@include micro
+				padding-bottom: 40px
 			&__slider
 				.prev.slick-arrow
 					left: 46%
@@ -600,11 +836,11 @@ body
 					&:hover
 						color: $acolor
 					@include medium
-						left: -10px!important
+						left: 42%
 					@include small
-						left: -10px!important
+						left: 35%
 					@include micro
-						left: -10px!important
+						left: 35%
 					&:before
 						font-size: 50px
 						color: #c9c2c3
@@ -618,11 +854,11 @@ body
 					&:hover
 						color: $acolor
 					@include medium
-						right: -10px!important
+						right: 42%
 					@include small
-						right: -10px!important
+						right: 35%
 					@include micro
-						right: -10px!important
+						right: 35%
 					&:before
 						font-size: 50px
 						color: #c9c2c3
@@ -637,6 +873,13 @@ body
 				margin-bottom: 15px
 				line-height: 1
 				padding: 0
+				@include medium
+					margin-bottom: 50px
+					font-size: 30px
+				@include small
+					font-size: 30px
+				@include micro
+					font-size: 30px
 				
 			&__highlight
 				color: $acolor
@@ -646,9 +889,8 @@ body
 				margin: 60px 15px 10px
 				padding: 70px 30px 20px
 				outline: none
-				@include large
-					
-				
+				@include micro
+					padding: 70px 10px 20px
 				
 				&-img
 					width: 100px
@@ -657,6 +899,9 @@ body
 					top: -50px
 					left: 50%
 					transform: translateX(-50%)
+					@include medium
+						top: -60px
+						width: 120px
 				&-desc
 					font-size: 24px
 					font-family: Museo500
@@ -664,25 +909,53 @@ body
 					text-align: center
 					@include large
 						height: 140px
+					@include medium
+						font-size: 20px
+						height: 140px
+					@include micro
+						font-size: 20px
+						height: 140px
 				&-imgBot
 					text-align: center
 					margin: 0 auto
 					height: 200px
+					@include medium
+						width: 100%
+					@include micro
+						width: 100%
 			&__connect
 				color: #fff
 				margin-top: 60px
 				height: 600px
+				@include medium
+					height: 400px
+				@include small
+					height: auto
+				@include micro
+					height: auto
+
 				&-img
 					width: 90%
+					@include small
+						width: 60%
+						margin: 0 auto
+						display: block
 				.connect
 					height: 100%
 					display: flex
 					align-items: center
 					justify-content: center
 					flex-direction: column
+					
 					&__desc
 						text-transform: uppercase
 						font-size: 40px
+						@include medium
+							font-size: 30px
+						@include small
+							font-size: 30px
+						@include micro
+							font-size: 28px
 					a
 						text-transform: uppercase
 						
@@ -702,6 +975,12 @@ body
 				margin-bottom: 15px
 				line-height: 1
 				padding: 0
+				@include medium
+					font-size: 30px
+				@include small
+					font-size: 30px
+				@include micro
+					font-size: 30px
 			&__highlight
 				color: $accent
 			&__desc
@@ -714,6 +993,12 @@ body
 				font-size: 24px
 				line-height: 1.3
 				font-family: Museo300
+				@include medium
+					font-size: 18px
+				@include small
+					font-size: 18px
+				@include micro
+					font-size: 18px
 				p
 					margin-bottom: 30px
 			&__content-highlight
@@ -725,6 +1010,14 @@ body
 			padding-bottom: 40px
 			background: url(../img/bg-practice.png) no-repeat center
 			background-size: 100% 100%
+			@include medium
+				padding-bottom: 0px
+			@include small
+				background: url(../img/bg_b_mob.png) no-repeat center
+				background-size: 100% 100%
+			@include micro
+				background: url(../img/bg_b_mob.png) no-repeat center
+				background-size: 100% 100%
 			&__title
 				font-size: 50px
 				text-transform: uppercase
@@ -734,6 +1027,13 @@ body
 				margin-bottom: 15px
 				line-height: 1
 				padding: 0
+				@include medium
+					font-size: 30px
+				@include small
+					font-size: 30px
+				@include micro
+					font-size: 30px
+
 			&__highlight
 				color: $acolor
 			&__desc
@@ -748,8 +1048,10 @@ body
 			&__numb
 				font-size: 60px
 				font-family: Robo-Bold
-				color: rgba(225,225,225,0.7)
+				color: rgba(255,255,255,0.7)
 				position: relative
+				@include small
+					left: 10%
 				
 				&:after
 					content: ""
@@ -758,15 +1060,29 @@ body
 					color: red
 					top: 50%
 					position: absolute
+					@include medium
+						display: none
+					@include small
+						display: none
+					@include micro
+						display: none
 			&__item
 				position: relative
-				background: rgba(255,255,255,0.7)
+				background: rgba(255,255,255,0.8)
 				height: 240px
 				padding: 60px 25px 10px
 				margin-top: 60px
 				text-align: center
 				@include large
 					height: 260px
+				@include medium
+					padding: 60px 15px 10px
+				@include small
+					width: 80%
+					margin: 0 auto
+				@include micro
+					padding: 60px 15px 10px
+					height: 180px
 				&-hl
 					color: $accent
 					display: block
@@ -784,6 +1100,28 @@ body
 					font-family: Museo300
 					@include large
 						font-size: 21px
+					@include medium
+						font-size: 18px
+					@include micro
+						font-size: 18px
+			.instruction
+				width: 240px
+				margin: 30px auto
+				display: block
+				border: none
+				border-radius: 30px
+				height: 40px
+				background: $acolor
+				color: $light-black
+				font-size: 20px
+				outline: none
+				transition: all 1s
+				@include small
+					width: 50%
+				&:active
+					transform: translateY(2px)
+				&:hover
+					background: #09a043
 		.faq
 			padding-top: 40px
 			padding-bottom: 40px
@@ -797,17 +1135,31 @@ body
 				line-height: 1
 				padding: 0
 				margin-bottom: 30px
+				@include medium
+					font-size: 30px
+				@include small
+					font-size: 30px
+				@include micro
+					font-size: 30px
 			&__highlight
 				color: $accent			
 			&__accordion	
 				.ui-accordion-content
 					max-height: 236px!important
+					@include small
+						max-height: 100%!important
 				.ui-state-default
 					border: 1px solid #cccccc
 					border-radius: 30px
 					background: #fff
 					box-shadow: 2px 2px 10px #ccc
 					outline: none
+					@include small
+						border-radius: 0px
+						border: none
+						box-shadow: none
+						font-weight: bold
+						
 					.ui-accordion-header-icon
 						right: 0
 						position: absolute
@@ -816,6 +1168,7 @@ body
 						
 				.ui-accordion.ui-accordion-header
 					padding: 0
+
 				.ui-widget-content
 					border: none
 				.ui-state-active
@@ -835,8 +1188,11 @@ body
 				color: $light-black
 				font-size: 20px
 				outline: none
+				transition: all 1s
 				&:active
 					transform: translateY(2px)
+				&:hover
+					background: #09a043
 		.effective
 			// background: url(../img/effective.png) no-repeat center
 			background: #000
@@ -844,18 +1200,35 @@ body
 			height: 600px
 			background-size: 100% 100%
 			overflow: hidden
-	
+			@include medium
+				height: 400px
+			@include micro
+				height: auto
 			&__content
 				display: flex
 				flex-direction: column
 				justify-content: center
 				align-items: center
 				height: 600px
+				@include medium
+					height: 400px
+				@include small
+					height: auto
+				@include micro
+					height: auto
 			&__text
 				font-size: 30px
 				font-family: Oswald-Bold
 				text-transform: uppercase
 				color: #ffffff
+				@include medium
+					font-size: 20px
+				@include small
+					font-size: 20px
+					line-height: 1.4
+				@include micro
+					font-size: 20px
+					line-height: 1.4
 			&__highlight
 				color: $acolor
 			p
@@ -863,11 +1236,26 @@ body
 				color: #fff
 				font-family: Museo300
 				line-height: 1.3
+				@include medium
+					font-size: 18px
+				@include small
+					font-size: 18px
+				@include micro
+					font-size: 18px
 			&__img
 				position: absolute
 				top: 110px
-				width: 600px
+				width: 90%
 				transform: scale(-1, 1)
+				@include medium
+					width: 400px
+					top: 50px
+				@include small
+					width: 100%
+					position: static
+				@include micro
+					width: 100%
+					position: static
 		.reviews
 			padding-top: 40px
 			padding-bottom: 40px
@@ -875,6 +1263,12 @@ body
 			margin-bottom: 50px
 			@include large
 				margin-bottom: 0px
+			@include medium
+				margin-bottom: 0px
+			@include small
+				padding-bottom: 0px
+			@include micro
+				padding-bottom: 0px
 			&__title
 				font-size: 50px
 				text-transform: uppercase
@@ -884,6 +1278,13 @@ body
 				margin-bottom: 55px
 				line-height: 1
 				padding: 0
+				@include medium
+					font-size: 30px
+				@include small
+					font-size: 30px
+				@include micro
+					font-size: 30px
+
 			&__highlight
 				color: $accent		
 			&__slider
@@ -899,11 +1300,14 @@ body
 						color: $acolor
 
 					@include medium
-						left: -10px!important
+						left: 42%
+						bottom: -50px
 					@include small
-						left: -10px!important
+						left: 40%
+						bottom: -50px
 					@include micro
-						left: -10px!important
+						left: 30%
+						bottom: -50px
 					&:before
 						font-size: 50px
 						color: #c9c2c3
@@ -918,17 +1322,28 @@ body
 						color: $acolor
 
 					@include medium
-						right: -10px!important
+						right: 42%
+						bottom: -50px
 					@include small
-						right: -10px!important
+						right: 40%
+						bottom: -50px
+						
 					@include micro
-						right: -10px!important
+						right: 30%
+						bottom: -50px
 					&:before
 						font-size: 50px
 						color: #c9c2c3				
 			
 			&__slide
 				margin: 0 auto
+				@include medium
+					height: 100%
+				@include small
+					max-height: 100%
+				@include micro
+					max-height: 100%
+
 				iframe
 					display: block
 					margin: 0 auto
@@ -936,22 +1351,37 @@ body
 					width: 500px
 					@include large
 						width: 95%
+					@include medium
+						width: 90%
+						max-height: 320px
+					@include small
+						width: 100%
+						max-height: 360px
+					@include micro
+						width: 100%
+						max-height: 370px
 			&__more
 				text-align: center
-				
-				
 				display: block
 				margin: 70px auto 0px
 				height: 60px
+				@include micro
+					margin-top: 90px
 				a
 					background: $acolor
-					padding: 10px 30px
-					font-size: 24px
+					padding: 5px 30px
+					font-size: 20px
 					border-radius: 40px
 					color: $light-black
 					text-decoration: none
+					transition: all 1s
+					@include medium
+						font-size: 20px
+					@include micro
+						font-size: 20px
+						
 					&:hover
-						background: #00af4f
+						background: #09a043
 		
 		.delivery
 			background: #fafafa
@@ -966,10 +1396,27 @@ body
 				margin-bottom: 55px
 				line-height: 1
 				padding: 0
+				@include medium
+					font-size: 30px
+					margin-bottom: 20px
+				@include small
+					font-size: 30px
+					margin-bottom: 20px
+				@include micro
+					font-size: 30px
+					margin-bottom: 20px
 			&__highlight
 				color: $accent	
 			ul
 				padding: 0
+				@include large
+					padding-left: 20px
+				@include medium
+					padding-left: 20px
+				@include small
+					padding-left: 20px
+				@include micro
+					padding-left: 20px
 				li
 					
 					margin-bottom: 20px
@@ -979,6 +1426,14 @@ body
 						font-family: Museo300
 						font-size: 24px
 						color: $light-black
+						@include medium
+							font-size: 20px
+						@include small
+							font-size: 18px
+						@include micro
+							font-size: 18px
+			img
+				margin-top: 30px
 			.payment
 				background: $accent
 				margin-top: 30px
@@ -1002,6 +1457,10 @@ body
 						line-height: 1.4
 						margin: 0
 						font-family: Museo500
+						@include small
+							font-size: 20px
+						@include micro
+							font-size: 18px
 				&__highlight
 					color: $acolor
 			
@@ -1014,11 +1473,28 @@ body
 				background-size: cover
 			@include medium
 				background-size: cover
+				margin-bottom: 0px
+			@include small
+				height: 100%
+				margin-bottom: 0px
+				background: url(../img/bg-form-mob.png) no-repeat
+				background-size: cover
+			@include micro
+				height: 100%
+				margin-bottom: 0px
+				background: url(../img/bg-form-mob.png) no-repeat
+				background-size: cover
 			&__video
 				z-index: 10
 				position: relative
 				top: 150px
 				z-index: 10
+				@include small
+					position: static
+					margin-top: 40px
+				@include micro
+					position: static
+					margin-top: 40px
 				iframe
 					width: 100%
 					height: 320px
@@ -1029,6 +1505,10 @@ body
 					@include medium
 						width: 90%
 						height: 280px
+						border: 14px solid rgba(210,216, 233, 0.7)
+					@include micro
+						width: 100%
+						height: 240px
 			&-form
 				padding-left: 20px
 				z-index: 10
@@ -1051,7 +1531,10 @@ body
 						width: 100px
 						top: 280px
 						z-index: 3
-						
+					@include small
+						display: none
+					@include micro
+						display: none						
 
 				form
 					height: 400px
@@ -1065,6 +1548,21 @@ body
 					@include medium
 						position: absolute
 						right: 10px
+						background: rgba(255,255,255,0.7)
+					@include small
+						width: 100%
+						border: none
+						border-radius: 0
+						background: transparent
+						margin-top: 0px
+						padding-top: 30px
+					@include micro
+						width: 100%
+						border: none
+						border-radius: 0
+						background: transparent
+						margin-top: 0px
+						padding-top: 30px
 						
 
 					input
@@ -1080,6 +1578,9 @@ body
 						outline: none
 						@include medium
 							line-height: 30px
+						@include micro
+							line-height: 30px
+							width: 100%
 				&__title
 					font-size: 24px
 					font-family: Oswald-Bold
@@ -1088,6 +1589,12 @@ body
 					text-align: center
 					margin: 10px auto 30px
 					line-height: 1.2
+					@include small
+						color: #fff
+						width: 80%
+					@include micro
+						color: #fff
+						width: 90%
 
 				&__crossed
 					position: relative
@@ -1099,11 +1606,21 @@ body
 						left: -10px
 						height: 50%
 						transform: rotate(-25deg)
+						@include small
+							border-bottom: 2px solid $acolor
+							height: 60%
+						@include micro
+							border-bottom: 2px solid $acolor
+							height: 60%
 				&__price
 					font-size: 30px
 					color: $accent
 					@include medium
 						font-size: 26px
+					@include small
+						color: $acolor
+					@include micro
+						color: $acolor
 				&__send-to
 					width: 70%
 					margin: 0 auto
@@ -1115,14 +1632,27 @@ body
 					color: $light-black
 					font-size: 20px
 					outline: none
+					transition: all 1s
+					@include micro
+						width: 100%
 					&:active
 						transform: translateY(2px)
+					&:hover
+						background: #09a043
 		
 		.contacts
 			padding-bottom: 40px
+			@include micro
+				padding-top: 30px
 			&__content
 				display: flex
 				justify-content: center
+				@include small
+					flex-direction: column
+					align-items: center
+				@include micro
+					flex-direction: column
+					align-items: center
 				a
 					font-size: 30px
 					margin-left: 50px
@@ -1131,6 +1661,10 @@ body
 					font-family: Museo300
 					text-decoration: none
 					@include medium
+						font-size: 20px
+					@include small
+						font-size: 20px
+					@include micro
 						font-size: 20px
 			&__highlight
 				font-weight: bold
@@ -1143,6 +1677,10 @@ body
 					color: $accent
 					margin-right: 10px
 					font-size: 40px
+					@include small
+						font-size: 30px
+					@include micro
+						font-size: 30px
 					
 			&__email
 
@@ -1153,6 +1691,10 @@ body
 					color: $accent
 					margin-right: 10px
 					font-size: 40px
+					@include small
+						font-size: 30px
+					@include micro
+						font-size: 30px
 	footer.footer
 		height: 40px
 		background: $accent
@@ -1162,3 +1704,5 @@ body
 			line-height: 40px
 			font-family: Museo300
 			margin: 0
+			@include small
+				font-size: 14px
