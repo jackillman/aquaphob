@@ -10,9 +10,16 @@
 	<script src="js/modernizr-custom.js"></script>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="theme-color" content="#2196F3">
+	<meta name="theme-color" content="#2196F3">
+	
+	<meta property="og:url" content="https://aquaphob.net">
+    <meta property="og:title" content="Aquaphob">
+	<meta name="description"
+    content="Aquaphob |Лучшее водоотталкивающее средство для одежды и обуви. Быстрая доставка. +38-093-576-57-94.">
+
+
 	<!-- <meta property="og:image" content="path/to/image.jpg"> -->
-	<link rel="shortcut icon" href="img/ahma.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="img/logo1.png" type="image/x-icon">
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="fonts/Font-awesome/fontawesome-webfont.woff">
@@ -20,7 +27,7 @@
     <link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css"/>
     <link rel="stylesheet" href="libs/FlipClock/flipclock.css">
 	<link rel="stylesheet" type="text/css" href="libs/bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" href="libs/jquery-ui-cust/jquery-ui.min.css">
+	<!-- <link rel="stylesheet" href="libs/jquery-ui-cust/jquery-ui.min.css"> -->
    
 
 <!-- Optional theme -->
@@ -57,12 +64,12 @@
 
 
 							</div>
-							<ul class="header-top__menu-mobile hidden-sm hidden-md hidden-lg">
-								<li><a href="#">Что такое Aquaphob?</a></li>
-								<li><a href="#">Как это работает</a></li>
-								<li><a href="#">Отзывы Клиентов</a></li>
-								<li><a class="buy-now" href="#">Заказать сейчас!</a></li>
-								<li><a class="questions" href="#">Вопросы</a></li>
+							<ul id="menu" class="mymenu header-top__menu-mobile hidden-sm hidden-md hidden-lg">
+								<li><a href="#hydrophobic">Что такое Aquaphob?</a></li>
+								<li><a href="#howitworks">Как это работает</a></li>
+								<li><a href="#reviews">Отзывы Клиентов</a></li>
+								<li><a href="#" class="buy-now" data-toggle="modal" data-target="#modalBuy">Заказать сейчас!</a></li>
+								<li><a href="#faq" class="questions">Вопросы</a></li>
 							</ul>
 							<div class="col-xs-6 col-sm-7 col-md-2 col-md-push-7">
 								<div class="header-top__contacts">
@@ -72,12 +79,12 @@
 							</div>
 							<div id="menu" class="hidden-xs col-sm-12 col-md-7 col-md-pull-2">
 
-								<ul class="header-top__menu">
-									<li><a href="#">Что такое Aquaphob?</a></li>
-									<li><a href="#">Как это работает</a></li>
-									<li><a href="#">Отзывы Клиентов</a></li>
-									<li><a class="buy-now" href="#">Заказать сейчас!</a></li>
-									<li><a class="questions" href="#">Вопросы</a></li>
+								<ul class="header-top__menu mymenu">
+									<li><a href="#hydrophobic">Что такое Aquaphob?</a></li>
+									<li><a href="#howitworks">Как это работает</a></li>
+									<li><a href="#reviews">Отзывы Клиентов</a></li>
+									<li><a href="#" class="buy-now" data-toggle="modal" data-target="#modalBuy">Заказать сейчас!</a></li>
+									<li><a href="#faq" class="questions" >Вопросы</a></li>
 								</ul>
 							</div>
 
@@ -100,7 +107,7 @@
 										frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen>
 									</iframe>
 								</div>
-								<img class="boots-top hidden-xs" src="img/boots-top.png" alt="boots">
+								<img class="boots-top hidden-xs wow bounceInUp" src="img/boots-top.png" alt="boots">
 							</div>
 						</div>
 						<div class="col-sm-6 col-md-6">
@@ -138,12 +145,12 @@
 
 						<div class="col-sm-6 col-md-4 attention__part attention__part1">
 							<h3>При покупке трех флаконов - два в подарок!</h3>
-							<img class="img-responsive" src="img/5.png" alt="five-bottles">
+							<img class="img-responsive wow bounceInUp" src="img/5.png" alt="five-bottles">
 						</div>
 						<div class="col-sm-6 col-md-4 attention__part attention__part2">
 							<h3>При покупке двух флаконов - один в подарок!</h3>
-							<img class="img-responsive" src="img/three-bottles.png" alt="three-bottles">
-							<div class="attention__price-item">
+							<img class="img-responsive wow bounceInUp" src="img/three-bottles.png" alt="three-bottles">
+							<div class="attention__price-item wow bounceInUp">
 								<div class="attention__price-item-inner">
 									<div class="attention__price-box" >
 										<span class="attention__price">	249</span>		
@@ -163,7 +170,7 @@
 				</div>
 			</div><!-- end attention  -->
 
-			<div class="hydrophobic">
+			<div id="hydrophobic" class="hydrophobic">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12">
@@ -283,7 +290,7 @@
 				</div>
 			</div><!-- end problems  -->
 
-			<div class="theory">
+			<div id="howitworks" class="theory">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
@@ -292,19 +299,20 @@
 						</div>
 						<div class="col-md-9">
 							<div class="theory__content">
-								<p>
+								<p class="theory__content-vis">
 									Рассмотрим для начала гладкие поверхности. Когда говорят, что поверхность хорошо смачивается водой, 
 									это значит, что помещенная на нее капля растечется и будет стремиться занять как можно большую площадь.
 									Такую поверхность по-другому называют <span class="theory__content-highlight">гидрофильной</span>. 
 								</p>
-								<p>
+								<p class="theory__content-vis">
 									Если же поверхность плохо смачивается водой, то капля будет не растекаться, а наоборот будет стремиться 
 									занять как можно меньшую площадь и принять форму близкую к сферической. Такую поверхность называют 
 									<span class="theory__content-highlight">гидрофобной</span>. 
 									Даже на самой гидрофобной гладкой поверхности капля принимает форму 
 									лишь близкую к полусфере, а не сферы. Площадь их контакта все еще достаточно велика.
 								</p>
-								<p>
+								
+								<p class="theory__content-invis">
 									Теперь рассмотрим капилляры. Капилляром называют любую трубочку, достаточно тонкую для проявления капиллярного
 									эффекта. Капиллярный эффект заключается в том, что если погрузить капилляр в воду, то уровень воды в нем будет 
 									отличаться от уровня воды снаружи. Если внутренние стенки капиляра гидрофильные, то уровень будет выше, то есть
@@ -315,7 +323,7 @@
 									ровной поверхностью. Чем гидрофобней капилляр, тем сильней из него выталкивается вода. Кроме смачиваемости, на 
 									капиллярный эффект существенно влияет внутренний диаметр капилляра. Чем он меньше, тем сильнее эффект.
 								</p>
-								<p>
+								<p class="theory__content-invis">
 									Наконец, пришло время поговорить про ткань и другие пористые поверхности. Поры - это маленикие тоннели, 
 									трещенки и другие полости, которые представляют собой ничто иное, как капилляры. Поскольку большинство пористых 
 									материалов имеют гидрофильную природу, то капиллярный эффект "всасывает" воду глубоко внутрь таких материалов. Обычные
@@ -336,7 +344,7 @@
 							</div>
 						</div>
 						<div class="col-md-3 hidden-sm hidden-xs">
-							<img class="img-responsive" src="../img/capilar.png" alt="capilar">
+							<img class="img-responsive" src="img/capilar.png" alt="capilar">
 						</div>
 					</div>
 				</div>
@@ -397,126 +405,141 @@
 							</div>
 						</div>
 						<div class="col-sm-12">
-							<button class="instruction">Подробные инструкции</button>
+							<a href="instructions.pdf" class="instruction">Подробные инструкции</a>
 						</div>
 					</div>
 				</div>
 			</div><!-- end practice  -->
 
-			<div class="faq">
+			<div id="faq" class="faq">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12">
 							<h2 class="faq__title">Вопросы и <span class="faq__highlight">ответы</span></h2>	
 						</div>
-						<div class="col-sm-6">
-							<div id="accordion" class="faq__accordion">
-								<h3>Как стирать обработанные вещи, если они не смачиваются водой и ее растворами?</h3>
-								<div>
-									<p>
+
+						<div class="col-sm-12 col-md-6">
+							<div id="accordeon" class="faq__accordion">
+							
+								<div class="acc-head">
+										После обработки, при тестировании средства оказалось, что в некоторых местах эффект слабее. Почему?
+										<span class="acc-arrow"></span>
+								</div>
+								<div class="acc-body">
 										Мыльные растворы имеют высокую "смачивательную способность", или, говоря научным языком, 
 										низкое значение поверхностного натяжения. Благодаря этому свойству они смачивают даже супергидрофобные 
 										поверхности, а так же эффективно удаляют загрязнения. 
 										По этой причине стирка супергидрофобных вещей ничем не отличается от других.
-									</p>
 								</div>
-								<h3>Сохряняют ли вещи, обработанные Aquaphob, свои свойства после стирки?</h3>
-								<div>
-									<p>
+								<div class="acc-head">
+										Сохряняют ли вещи, обработанные Aquaphob, свои свойства после стирки?
+										<span class="acc-arrow"></span>
+								</div>
+								<div class="acc-body">
 										Растворы моющих средств снижают водоотталкивающие свойства обработанных вещей. После полноценного цикла 
 										в стиральной машинке со стиральным порошком вещь будет нуждаться в повторной обработке. Если стирать обработанную
 										вещь вручную, без порошка, в теплой/горячей воде, 
 										то супергидрофобные свойства продержатся дольше - до десяти стирок.
-									</p>
 								</div>
-								<h3>Что делать, если на обработанной поверхности остались следы от густой липкой грязи (ил, жир и т.п.)?</h3>
-								<div>
-									<p>
+								<div class="acc-head">
+										Что делать, если на обработанной поверхности остались следы от густой липкой грязи (ил, жир и т.п.)?
+										<span class="acc-arrow"></span>
+								</div>
+								<div class="acc-body">
 										Из-за высокой вязкости такие загрязнители как жидкие жиры, густой кетчуп, влажная глина или ил могут оставлять следы 
 										на обработанной поверхности. Чтобы удалить их достаточно 
-										просто промыть струей чистой воды или промокнуть сухой бумажной салфеткой, в зависимости от типа загрязнения.
-									</p>
+										просто промыть струей чистой воды или промокнуть сухой бумажной салфеткой, в зависимости от типа загрязнения.								
+									</div>
+								<div class="acc-head">
+										Как долго длиться супергидрофобный эффект после обработки средством Aquaphob?
+										<span class="acc-arrow"></span>
 								</div>
-								<h3>Как долго длиться супергидрофобный эффект после обработки средством Aquaphob?</h3>
-								<div>
-									<p>
+								<div class="acc-body">
 										Длительность эффекта зависит от структуры материала - его пористости, прочности, эластичности и т.д., а так же от 
 										количества нанесенного средства и от интенсивности эксплуатации. Например, для замшевых ботинок, если их носить
 										несколько дней в неделю и периодически протирать от пыли, супергидрофобный эффект может длиться больше двух месяцев.
 										Но даже когда супергидрофобный эффект ослабнет, обувь еще несколько месяцев будет устойчива к промоканию.
-									</p>
 								</div>
-								<h3>Можно ли обрабатывать супергидрофобным средством Aquaphob нательное или постельное белье?</h3>
-								<div>
-									<p>
+								<div class="acc-head">
+										Можно ли обрабатывать супергидрофобным средством Aquaphob нательное или постельное белье?
+										<span class="acc-arrow"></span>
+								</div>
+								<div class="acc-body">
 										Не рекомендуем. Согласно гигиеническим требованиям к постельному и нательному белью (включая носки и колготы), они 
 										должны впитывать и отводыть от кожи пот, который выделяет человек. Супергидрофобные поверхности же будут препятствовать 
 										отводу пота, что вредно для кожи. Гидрофобные носки можно носить лишь поверх гидрофильных (необработанных гидрофобным 
 										средством и впитывающих влагу). Таким образом, нижняя пара носков будет отводить от кожи пот, 
 										а верхняя пара будет защищать от наружной влаги. По схожему принципу функционируют мембранные горнолыжные костюмы.
-									</p>
 								</div>
-							</div>								
-
-						</div>
-
-						<div class="col-sm-6">
-							<div id="accordion" class="faq__accordion">
-								<h3>После обработки, при тестировании средства оказалось, что в некоторых местах эффект слабее. Почему?</h3>
-								<div>
-									<p>
+								</div>
+								
+							</div>
+							
+								<div class="col-sm-12 col-md-6" >
+							<div id="accordeon" class="faq__accordion">
+							
+								<div class="acc-head">
+										После обработки, при тестировании средства оказалось, что в некоторых местах эффект слабее. Почему?
+										<span class="acc-arrow"></span>
+									</div>
+								<div class="acc-body">
 										Если после первой обработки в некоторых местах эффект выражен слабее, это означает, что средство было нанесено не 
 										достаточно равномерно. Для того чтоб исправить ситуацию, достаточно обработать второй раз все изделие, или только 
 										некоторые места. При этом расход средства Aquaphob 
 										на второй слой будет намного меньше, ведь впитывающая способность материала очень понижается после первой обработки.
-									</p>
+									
 								</div>
-								<h3>На какие материалы можно наносить Aquaphob?</h3>
-								<div>
-									<p>
+								<div class="acc-head">
+										На какие материалы можно наносить Aquaphob?
+										<span class="acc-arrow"></span>
+								</div>
+								<div class="acc-body">
 										Aquaphob придает супергидрофобные свойства практически любым пористым негладким поверхностям, таким как: трикотаж, 
 										замша, фетр, нубук, дерево, кирпич, бетон, картон. Средство отлично подойдет для придания водоотталкивающих свойств 
 										таким изделиям как обувь, верхняя одежда, головные уборы, зонтики (исчезнет необходимость их сушить), оббивка мягкой 
 										мебели, салон автомобиля, ковры, скатерти, одежда 
 										домашних питомцев, спецодежда, туристическое снаряжение, строительные материалы, сумки и чехлы для техники и другие.
-									</p>
+											
 								</div>
-								<h3>Можно ли наносить средство Aquaphob на волосы и защитит ли это их от намокания?</h3>
-								<div>
-									<p>
+								<div class="acc-head">
+										Можно ли наносить средство Aquaphob на волосы и защитит ли это их от намокания?
+										<span class="acc-arrow"></span>
+								</div>
+								<div class="acc-body">
 										Aquaphob не содержит токсичных или агресивных веществ, поэтому он не причинит вреда волосам большего чем, например, 
 										лак для волос. Но, поскольку волосы в том виде, в 
 										каком они растут на человеке не обладают необходимой структурой, существенных водоотталкивающих свойств они 
 										не приобретут.
-									</p>
 								</div>
-								<h3>Возможно ли ускорить процесс высыхания средства Aquaphob?</h3>
-								<div>
-									<p>
+								<div class="acc-head">
+										Возможно ли ускорить процесс высыхания средства Aquaphob?
+										<span class="acc-arrow"></span>
+								</div>
+								<div class="acc-body">
 										Да, возможно. Для этого можно использовать бытовой фен, сушилку для
 										полотенец или специальную сушилку для обуви. Как только вещь или обувь полностью высохнут они готовы 
 										к использованию.
-									</p>
 								</div>
-								<h3>Каков объем флакона и на сколько его хватает?</h3>
-								<div>
-									<p>
+								<div class="acc-head">
+										Каков объем флакона и на сколько его хватает?
+										<span class="acc-arrow"></span>
+								</div>
+								<div class="acc-body">
 										Объем одного флакона составляет 100 миллилитров. Этого объема обычно хватает на 5 обработок пары обуви среднего размера,
 										например замшевых туфлей. При этом, согласно инструкции (доступна под кнопкой "подробные инструкции"), первый раз 
 										изделие рекомендуется обрабатывать в два слоя. При нанесении на ткань расход зависит от впитывающей способности 
 										материала. Например,
 										при обработке ткани из хлопка, одного флакона хватит на обработку в один слой площади до 0,5 квадратного метра.
-									</p>
+									
 								</div>
 							</div>
-									  
-							<button class="question">Задать вопрос</button>
-
+						<a href="" class="question" data-toggle="modal" data-target="#modalQuestion">Задать вопрос</a>
 						</div>
 					</div>
 				</div>
-			</div><!-- end faq  -->
-
+			</div>
+		<!--	end faq  -->
+		<!--effective  -->
 			<div class="effective">
 				<div class="container">
 					<div class="row">
@@ -539,7 +562,7 @@
 				</div>
 			</div><!-- end effective  -->
 
-			<div class="reviews">
+			<div id="reviews" class="reviews">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12">
@@ -575,12 +598,25 @@
 										frameborder="0" allowTransparency="true">
 									</iframe>	
 								</div>
+								<div class="reviews__slide">
+									<iframe
+										src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Faquaphob%2Fposts%2F577657662381256&width=500"
+										width="500" height="161" style="border:none;overflow:hidden" scrolling="no"
+										frameborder="0" allowTransparency="true"></iframe>
+									</iframe>	
+								</div>
+								<div class="reviews__slide">
+									<iframe
+										src="https://www.facebook.com/plugins/comment_embed.php?href=https%3A%2F%2Fwww.facebook.com%2Faquaphob%2Fvideos%2F532516216895401%2F%3Fcomment_id%3D560703670743322&include_parent=false"
+										width="500" height="450" style="border:none;overflow:hidden" scrolling="no"
+										frameborder="0" allowTransparency="true"></iframe>
+								</div>
 							
 							</div>	
 						</div>
 						<div class="col-sm-12">
 							<div class="reviews__more">
-								<a href="#">Больше отзывов в facebook</a>
+								<a href="https://www.facebook.com/aquaphob/">Больше отзывов в facebook</a>
 							</div>
 						</div>
 					</div>
@@ -669,29 +705,124 @@
 
 <!-- <div id="up"><i class="fa fa-angle-up" aria-hidden="true"></i></div> -->
 
+ <!-- Modal. Buy -->
+ <div class="modal fade ajax-form-container" id="modalBuy" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content" style="overflow: hidden;">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+				<h4 class="modal-title">Заказать</h4>
+			</div>
+			<div class="modal-body" style="max-height: 543px; overflow-y: auto;">
+				<form action="intermediate.php" method="POST">
+					<input class="modal-content" tabindex="1" placeholder="Ваше имя" type="text" name="name" required>
+					<input class="modal-content" tabindex="2" placeholder="Ваш телефон" type="number" name="phone"  title="Формат ввода +38 (050) 121-34-57">
+					<input class="modal-btn" style="margin:0 auto 0;" tabindex="3" type="submit" name="submit" value="Заказать">
+				</form>
+			</div>
+
+			<div class="email-container email-container-success display-none">
+				<img src="img/bg-email-success.png" alt="Success">
+				<h2>Ваш заказ принят</h2>
+			</div>
+
+			<div class="email-container email-container-error display-none">
+				<img src="img/bg-email-error.png" alt="Error">
+				<h2>Ошибка! Попробуйте позже.</h2>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+</div>
+<!-- / Modal. Buy. End -->
+
+ <!-- Modal. Buy -->
+ <div class="modal fade ajax-form-container" id="modalQuestion" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content" style="overflow: hidden;">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+				<h4 class="modal-title">Задать вопрос</h4>
+			</div>
+			<div class="modal-body" style="max-height: 543px; overflow-y: auto;">
+				<form action="intermediate.php" method="POST">
+					<input class="modal-content" tabindex="1" placeholder="Ваше имя" type="text" name="name" required>
+					<input class="modal-content" tabindex="2" placeholder="Ваш телефон" type="number" name="phone"  title="Формат ввода +38 (050) 121-34-57">
+					<textarea class="modal-content" name="message" id="" cols="30" rows="4" placeholder="Сообщение"></textarea>
+					<input class="modal-btn" style="margin:0 auto 0;" tabindex="3" type="submit" name="submit" value="Заказать">
+				</form>
+			</div>
+
+			<div class="email-container email-container-success display-none">
+				<img src="img/bg-email-success.png" alt="Success">
+				<h2>Ваше сообщение отправлено</h2>
+			</div>
+
+			<div class="email-container email-container-error display-none">
+				<img src="img/bg-email-error.png" alt="Error">
+				<h2>Ошибка! Попробуйте позже.</h2>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+</div>
+<!-- / Modal. Buy. End -->
 
 
 
 
+
+
+
+<!--Brought to you by www.TheBlogWidgets.com-->
+<div class="theblogwidgets" style="">
+	<!--Brought to you by http://www.theblogwidgets.com/2013/11/floating-facebook-like-box-widget-for.html-->
+	
+	<div>
+			<img class="fb-widget" src="img/TheBlogWidgets_facebook_widget.png" alt="logo">
+		<!-- http://www.theblogwidgets.com/2013/11/floating-facebook-like-box-widget-for.html-->
+		<iframe
+				src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Ffacebook.com%2Faquaphob&width=245&colorscheme=light&show_faces=true&border_color=white&connections=9&stream=false&header=false&height=220"
+				scrolling="no" frameborder="0" scrolling="no"
+				style="border: white; overflow: hidden; height: 220px;
+				width: 245px;background:#fafafa;color:#000000;">
+			<!--Brought to you by www.TheBlogWidgets.com--></iframe>
+			
+			
+				<!--<a style="color:#a8a8a8;font-size:8px;" href="http://jasperroberts.com">Jasper Roberts</a> - <a
+				style="color:#a8a8a8;font-size:8px;"
+				href="http://www.theblogwidgets.com/2013/11/floating-facebook-like-box-widget-for.html">Blog</a>-->
+				<div class="good_page">Нравится <b>Aquaphob?</b> Жми "Нравится страница", чтобы быть в
+					курсе акций и
+					новостей!</div>
+			
+	
+
+	</div>
+</div>
+<!--Floating Facebook Widget by www.TheBlogWidgets.com AND www.JasperRoberts.com END-->
 
 
 
 
 	 <link rel="stylesheet" href="libs/animate/animate.css">
-	 <link rel="stylesheet" href="libs/raty/jquery.raty.css">
+	 <!-- <link rel="stylesheet" href="libs/raty/jquery.raty.css"> -->
     
 	<link rel="stylesheet" type="text/css" href="css/main.min.css">
 	
     
     
-    <script src="libs/jquery-3.2.1.min.js"></script>
-
-    <script src="libs/jquery-ui-cust/jquery-ui.min.js"></script>
+	<script src="libs/jquery-3.2.1.min.js"></script>
+	
+	<script src="libs/readmore.min.js"></script>	
+	
+	
+    <!-- <script src="libs/jquery-ui-cust/jquery-ui.min.js"></script> -->
     
 	<script src="libs/wow.min.js"></script>
 	<script src="libs/bootstrap/bootstrap.min.js"></script>
-	<script src="libs/raty/jquery.raty.js"></script>
-	<script src="libs/mixitup.min.js"></script>
+	<!-- <script src="libs/raty/jquery.raty.js"></script> -->
+	<!-- <script src="libs/mixitup.min.js"></script> -->
     <script>
         new WOW().init();
     </script>
@@ -699,8 +830,8 @@
  <!--    <script type="text/javascript" src="libs/fancy/jquery.mousewheel-3.0.4.pack.js"></script> -->
 	<!-- <script type="text/javascript" src="libs/fancy/jquery.fancybox-1.3.4.js"></script> -->
 <!-- 	<link rel="stylesheet" type="text/css" href="libs/fancy/jquery.fancybox-1.3.4.css" media="screen" /> -->
-	<script type="text/javascript" src="libs/fancybox/source/jquery.fancybox.js"></script>
-	<link rel="stylesheet" type="text/css" href="libs/fancybox/source/jquery.fancybox.css" media="screen" />
+	<!-- <script type="text/javascript" src="libs/fancybox/source/jquery.fancybox.js"></script>
+	<link rel="stylesheet" type="text/css" href="libs/fancybox/source/jquery.fancybox.css" media="screen" /> -->
     <script src="libs/slick/slick.js"></script>
 	<!-- <script src="js/flexibility.js"></script> -->
 	<script src="libs/FlipClock/flipclock.min.js"></script>
